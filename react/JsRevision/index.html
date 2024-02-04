@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let a =45;
+    console.log("The value of number is " + a );
+
+    function happy()
+    {
+        console.log("The function is named as happy as it is all fine how about you");
+    }
+    happy();
+
+    let obja ={
+        name:"Abhishek bhatt",
+        id :56789,
+        func : function myfunc(number) {
+            console.log("The number is "+number);
+            
+        }
+    }
+    document.addEventListener("click" ,function click(){
+        console.log("clicked");
+        alert("hello system failure !");
+        let conf = confirm("Are You sure to make changes ");
+        console.log(conf);
+
+    })
+
+    let mobj ={
+        a:this, myfunc :function(number){
+            console.log(this);
+        }
+    }
+    mobj.myfunc();
+    console.log(mobj.a);
+    setTimeout(() => {
+        console.log("I am the setTimeOut statement");
+    }, 4000);
+
+    console.log("Below statements");
+</script>
+<body>
+    <h1>Hi this is the heading</h1>
+    
+</body>
+</html>
