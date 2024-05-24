@@ -1,0 +1,396 @@
+<!-- Q1) Create a sample GEHU website using HTML5 semantic tags. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEHU WEBSITE </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+        #logo {
+            float: left;
+            width: 19vw;
+            height: 10vh;
+            padding: 5px;
+            margin-right: 30px;
+        }
+
+        .topnav {
+            overflow: hidden;
+
+        }
+
+        .topnav a {
+            float: left;
+
+
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+
+            padding: 23px 20px;
+            color: red;
+        }
+
+        .mainheading {
+            font-size: 2.3vw;
+            display: flex;
+            margin-bottom: 0px;
+            flex-direction: column;
+            margin: 100px 0;
+            height: 485px;
+            width: 100vw;
+            text-align: center;
+        }
+
+        #heading {
+            margin: 0px;
+        }
+
+        #subheading {
+
+            margin: 0px;
+        }
+
+        .topnav a:hover {
+            background-color: rgb(181, 181, 181);
+            color: black;
+            transition: 0.5s;
+
+        }
+
+        .topnav a.active {
+            background-color: #6d1703;
+            color: rgb(6, 6, 6);
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .sections {
+            display: flex;
+            flex-direction: row;
+
+
+        }
+
+        #mainsection {
+            margin: 10px 20px;
+            font-size: 2vw;
+            font-weight: 350;
+            padding: 20px;
+        }
+
+        .commonsection {
+            margin: 10px 20px;
+            font-size: 1.3vw;
+            padding: 20px;
+            font-weight: 100;
+        }
+
+        .articlediv {
+            display: flex;
+            flex-direction: row;
+            margin: 30px 20px;
+            background-color: rgb(210, 209, 209)
+        }
+
+        .mainarticle {
+            padding: 30px;
+            font-size: 1.2vw;
+            background-color: white;
+            margin: 50px;
+        }
+
+        select {
+            display: block;
+            margin: 10px;
+            height: 4vh;
+            width: 17vw;
+            font-size: 17px;
+            border-radius: 5px;
+
+            background-color: rgb(238, 238, 238);
+            color: black;
+        }
+
+        #btn {
+            color: white;
+            background-color: black;
+            height: 4vh;
+            width: 17vw;
+            padding: 5px;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: 550;
+        }
+
+        #btn:hover {
+            background-color: rgb(40, 40, 40);
+            transition: 1;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 7px;
+            text-align: center;
+            bottom: 0px;
+            width: 100vw;
+            height: fit-content;
+        }
+
+        .article img {
+            height: 50vh;
+            width: 40vw;
+            margin: 20px 75px;
+
+        }
+
+
+        @media screen and (max-width: 1200px) {
+            #mainsection {
+                margin: 5px 10px;
+                font-size: 17px;
+                font-weight: 350;
+                padding: 10;
+            }
+
+            .commonsection {
+                margin: 5px 10px;
+                font-size: 17px;
+                padding: 10;
+                font-weight: 100;
+            }
+
+            .heading {
+                font-size: 13px;
+            }
+
+        }
+
+        @media screen and (max-width: 770px) {
+            .article img {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 520px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .article img {
+                display: none;
+            }
+
+            .mainheading {
+                font-size: 18px;
+                display: flex;
+                margin-bottom: 0px;
+                flex-direction: column;
+                margin: 100px 0;
+                height: 210;
+                width: 100vw;
+                text-align: center;
+            }
+
+            #mainsection {
+                margin: 5px 10px;
+                font-size: 20px;
+                font-weight: 350;
+                padding: 10;
+            }
+
+            .commonsection {
+                margin: 5px 10px;
+                font-size: 20px;
+                padding: 10;
+                font-weight: 100;
+            }
+
+
+            .topnav a.icon {
+
+                font-size: 20px;
+                float: right;
+                display: block;
+
+            }
+
+            .heading {
+                font-size: 13px;
+            }
+
+            select {
+                width: fit-content;
+                height: fit-content;
+                font-size: 17px;
+            }
+
+
+        }
+
+        @media screen and (max-width: 520px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .logodiv {
+                display: inline;
+            }
+
+            .topnav.responsive #logo {
+                margin-left: 50%;
+                width: 29vw;
+                height: 5vh;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+
+            <nav>
+                <div class="logodiv"> <img id="logo" src="logo.jpg"></div>
+
+                <a href="#home">Home </a>
+                <a href="#aboutus">About us</a>
+
+                <a href="#cources">Cources</a>
+                <a href="#contactus">Contact us</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </nav>
+        </div>
+
+    </header>
+    <header>
+        <div class="mainheading" id="home">
+            <h1 id="heading">THIS IS GRAPHIC ERA</h1>
+            <h2 id="subheading">WE'RE GLAD, YOU ASKED!</h2>
+
+        </div>
+    </header>
+
+    <div class="sections" id="aboutus">
+        <section id="mainsection">
+            At the forefront of Quality Higher Education and Academic Excellence <strong>Graphic Era Deemed to be
+                University</strong>
+
+        </section>
+        <section class="commonsection">
+            Graphic Era (Deemed to be University) was in existence as Graphic Era Institute of Technology since 1997,
+            with the goal of providing world class-education with a clear focus on cutting-edge technologies,
+            professional development of students, critical thinking and quality research. The University has achieved
+            numerous milestones in its glorious past on the basis of its academic rigor, consistently Top Performing
+            Students and Alumni and an immensely strong and qualified teaching fraternity.
+
+        </section>
+        <section class="commonsection">
+            The University has featured in the Top 100 Universities of India, in the coveted National Institutional
+            Ranking Framework established by the Government of India, for the past four years consecutively, with the
+            rankings growing each year across varied domains.
+
+            Graphic Era (Deemed to be University) is based in the magnificent and serene city of Dehradun, nestled in
+            the valley surrounded by Rajaji National Park on one end and Clement Town Cantonment on the other. The
+            University prides itself in its University regime that warrants the holistic development of all the students
+            part
+            of the Graphic Era Fraternity.
+        </section>
+        <section>
+
+        </section>
+
+    </div>
+
+    <div class="articlediv" id="cources">
+        <article class="article">
+            <div class="mainarticle">
+
+                <form>
+                    <div class="heading">
+                        <h2>Get Started!</h2>
+                        <h3>Choose the course of your choice</h3>
+                    </div>
+
+                    <select name="dropdown" id="dd">
+                        <option value="B.Tech" id="red" selected>B.Tech</option>
+                        <option value="M.tech" id="red">M.Tech</option>
+                        <option value="BBA" id="red">BBA</option>
+                        <option value="MCA" id="red">MCA</option>
+                        <option value="Pharma" id="red">Pharma</option>
+                        <option value="Animation" id="red">Animation and Gaming</option>
+                        <option value="Fashion" id="red">Fashion designing</option>
+                        <option value="BCA" id="red">BCA</option>
+                    </select>
+                    <select name="dropdown" id="dd">
+                        <option value="Black" id="black" selected>Under Graduate</option>
+                        <option value="Blue" id="black">Post Graduate</option>
+
+                    </select>
+                    <input type="submit" id="btn">
+                </form>
+        </article>
+        <article class="article">
+            <img src="gehu.jpg">
+        </article>
+    </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <p>Careers | Sitemap | Disclaimer | Privacy Policy | Email | Terms & Conditions | Refund Policy | GEU
+                Journal | IT Policy | Library | Anti Ragging | Finance
+
+                <strong>
+                    Graphic Era (Deemed to be University) © 2024
+                </strong>
+            </p>
+        </footer>
+    </div>
+
+    <!-- javascript code starts here -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
